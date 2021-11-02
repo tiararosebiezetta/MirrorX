@@ -1,1 +1,1 @@
-web: scalingo.sh
+web: scalingo.sh && start.sh
