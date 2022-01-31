@@ -16,7 +16,7 @@ RUN if [ "$(uname -m)" = "aarch64" ] ; then \
     mv ff*/ff* /usr/local/bin/ && rm -rf ff* && \
     wget -q https://github.com/viswanathbalusu/megasdkrest/releases/latest/download/megasdkrest-${HOST_CPU_ARCH} -O /usr/local/bin/megasdkrest && \
     chmod a+x /usr/local/bin/megasdkrest && mkdir /app/ && chmod 777 /app/ && \
-    pip3 install --no-cache-dir MirrorX && \
+    pip3 install --no-cache-dir MirrorX flask flask_restful && \
     apt-get purge -yqq gcc && apt-get -y autoremove && rm -rf /var/lib/apt/lists/* && apt-get clean
 
 COPY . /app
