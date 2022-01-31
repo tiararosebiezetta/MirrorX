@@ -8,7 +8,7 @@ fi
 
 if [[ -n $ACCOUNTS_ZIP_URL ]]; then
 	wget -q $ACCOUNTS_ZIP_URL -O accounts.zip
-	unzip accounts.zip
+	unzip -q -o accounts.zip
 	rm accounts.zip
 fi
 
